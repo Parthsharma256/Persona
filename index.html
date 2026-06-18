@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+   content="width=device-width,
+   initial-scale=1.0">
+   <title>Persona</title>
+   <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+<!--Start Screen-->
+   <div id="start-screen" class="w-full max-w-md bg-gray-800 rounded-2x1 shadow-2x1 p-8 text-center fade-in">
+      <h1 class="text-3x1 font-bold mb-4 text-indigo-400">Find Your Personality Type</h1>
+      <p class="text-gray-400 mb-4">Take this quiz to find out your Myers-Briggs personality type.</p>
+      <button onclick="startQuiz()"class="w-full bg indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-200 shadow-lg shadow-indigo-500/30">
+         Start Quiz
+      </button>
+   </div>
+<!--Quiz Screen-->
+   <div id="Quiz-screen" class="w-full max-w-lg bg-gray-800 rounded-2x1 shadow-2x1 p-6 md: p-8 hidden">
+      <div class="mb-6">
+         <div class="flex justify-between text-sm text-gray-400 mb-2 font-medium">
+            <span id="question-counter">Question 1/12</span>
+            <span>Progress</span>
+         </div>
+         <div class="w-full bg-gray-700 rounded-full h-2.5">
+         <div id="progress bar" class="bg-indigo-500 h-2.5 rounded-full transition-all duration-500 ease-out" style="width: 0%;"></div>
+      </div>
+   </div>
+
+<div id="question-container" class="fade-in min-h-[200px] flex flex-col justify-center">
+   <h2 id="question-text" class="text-xl md:text-2xl font-semibold mb-6 leading-relaxed text-gray-100"></h2>
+   <div id="options-container" class="space-y-3">
+   </div>
+</div>
+   </div>
+   
+   <!--Result Screen -->
+   <div id="result-screen" class="w-full max-w-md bg-gray-800 rounded-2xl shadow-2xl p-8 text-center hidden">
+      <h2 class="text-gray-400 font-semibold tracking-widest uppercase text-sm mb-2">Your Personality Type Is</h2>
+      <h1 id="result-type" class="text-5xl font-bold text-indigo-400 mb-4 tracking-tight"></h1>
+      <h3 id="result-title" class="text-xl font-semibold text-gray-200 mb-3"></h3>
+      <p id="result-desc" class="text-gray-400 mb-8 leading-relaxed"></p>
+<div class="bg-gray-700/50 rounded-xl p-4 mb-8">
+   <h4 class="text-sm font-semibold text-gray-300 mb-2 uppercase tracking-wide">Trait Breakdown</h4>
+   <div id="trait-breakdown" class="flex justify-between text-sm font-medium text-gray-400">
+<!-- Traits injected from js-->
+</div>
+   </div>
+
+   <button onclick="resetQuiz()" class="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-200">
+      Retake Quiz
+       </button>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
